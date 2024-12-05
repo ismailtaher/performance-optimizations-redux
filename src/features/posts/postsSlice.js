@@ -124,7 +124,6 @@ const postsSlice = createSlice({
           console.log(action.payload);
           return;
         }
-        const { id } = action.payload;
         action.payload.date = new Date().toISOString();
         postsAdapter.updateOne(state, action.payload);
       })
